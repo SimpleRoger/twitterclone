@@ -16,10 +16,10 @@ const modalSlice = createSlice({
       state.signUpModalOpen = false;
     },
     openLogInModal: (state) => {
-      state.signUpModalOpen = true;
+      state.logInModalOpen = true;
     },
     closeLogInModal: (state) => {
-      state.signUpModalOpen = false;
+      state.logInModalOpen = false;
     },
   },
 });
