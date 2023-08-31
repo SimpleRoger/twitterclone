@@ -4,6 +4,13 @@ const initialState = {
   signUpModalOpen: false,
   logInModalOpen: false,
   commentModalOpen: false,
+
+  commentTweetDetails: {
+    id: null,
+    tweet: null,
+    photoUrl: null,
+    username: null,
+  },
 };
 
 const modalSlice = createSlice({
@@ -28,6 +35,13 @@ const modalSlice = createSlice({
     closeCommentModal: (state) => {
       state.commentModalOpen = false;
     },
+    setCommentTweet: (state, action) => {
+      state.commentTweetDetails.name = action.payload.name;
+      state.commentTweetDetails.username = action.payload.username;
+      state.commentTweetDetails.id = action.payload.uid;
+      state.commentTweetDetails.photoUrl = action.payload.photoUrl;
+      state.commentTweetDetails.tweet = action.payload.tweet;
+    },
   },
 });
 
@@ -38,6 +52,7 @@ export const {
   closeLogInModal,
   openCommentModal,
   closeCommentModal,
+  setCommentTweet,
 } = modalSlice.actions;
 
 export default modalSlice.reducer;
