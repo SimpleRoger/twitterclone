@@ -38,7 +38,8 @@ export default function CoomentModal() {
     await updateDoc(docRef, {
       comments: arrayUnion(commentDetails)
     })
-
+    dispatch(closeCommentModal())
+    router.push("/" + tweetDetails.id)
     // dispatch(closeCommentModal())
     // router.push("/" + tweetDetails.id)
 
