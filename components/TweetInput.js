@@ -28,8 +28,8 @@ export default function TweetInput() {
   const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false);
   const filePickerRef = useRef(null);
+  const dispatch = useDispatch();
   async function sendTweet() {
-    const dispatch = useDispatch();
     if (!user.username) {
       dispatch(openLogInModal());
       return;
