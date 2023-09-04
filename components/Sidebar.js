@@ -39,7 +39,7 @@ export default function Sidebar() {
         <SidebarLink Icon={BookmarkIcon} text={"Bookmarks"} />
         <SidebarLink Icon={UserIcon} text={"Profile"} />
         <SidebarLink Icon={DotsCircleHorizontalIcon} text={"More"} />
-        <button className="hidden xl:inline bg-[#1d9bf0] rounded-full h-[52px] w-[200px] text-lg font-bold mt-2">
+        <button className="hidden xl:inline bg-[#1d9bf0] rounded-full h-[52px] w-[200px] text-lg font-bold mt-2 hover:cursor-not-allowed">
           Tweet
         </button>
         <div
@@ -65,7 +65,10 @@ export default function Sidebar() {
 
 function SidebarLink({ text, Icon }) {
   return (
-    <li className="hoverAnimation flex justify-center mb-3 items-center text-xl space-x-3">
+    <li
+      className="hoverAnimation flex justify-center mb-3 items-center text-xl space-x-3 hover:cursor-not-allowed
+    "
+    >
       <Icon className="h-7" />
       <span className="hidden xl:inline">{text}</span>
     </li>

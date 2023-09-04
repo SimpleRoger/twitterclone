@@ -117,18 +117,18 @@ export default function TweetInput() {
                 className="hidden"
                 onChange={addImagetoTweet}
               ></input>
-              <div className="iconAnimation">
+              <div className="iconAnimation hover:cursor-not-allowed">
                 <ChartBarIcon className="h-[22px] text-[#1d9bf0]" />
               </div>
 
-              <div className="iconAnimation">
+              <div className="iconAnimation hover:cursor-not-allowed">
                 <EmojiHappyIcon className="h-[22px] text-[#1d9bf0]" />
               </div>
 
-              <div className="iconAnimation">
+              <div className="iconAnimation hover:cursor-not-allowed">
                 <CalendarIcon className="h-[22px] text-[#1d9bf0]" />
               </div>
-              <div className="iconAnimation">
+              <div className="iconAnimation hover:cursor-not-allowed">
                 <LocationMarkerIcon className="h-[22px] text-[#1d9bf0]" />
               </div>
             </div>
